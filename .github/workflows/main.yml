@@ -29,10 +29,12 @@ jobs:
             devcontainer build \
                 --workspace-folder src/ubuntu \
                 --image-name ghcr.io/${{ github.actor }}/ubuntu:devcontainer \
+                --cache-from ghcr.io/${{ github.actor }}/ubuntu:devcontainer \
                 --push true
         - name: Build and push languages
           run: |
             devcontainer build \
                 --workspace-folder src/${{ matrix.language}} \
                 --image-name ghcr.io/${{ github.actor }}/${{ matrix.language}}:devcontainer \
+                --cache-from ghcr.io/${{ github.actor }}/${{ matrix.language}}:devcontainer \
                 --push true
