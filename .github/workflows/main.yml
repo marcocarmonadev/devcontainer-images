@@ -24,17 +24,24 @@ jobs:
             password: ${{ secrets.GH_TOKEN }}
         - name: Install devcontainer CLI
           run: npm install -g @devcontainers/cli
-        - name: Build and push ubuntu
+        - name: Build and push noble
           run: |
             devcontainer build \
                 --workspace-folder src/ubuntu \
                 --image-name ghcr.io/${{ github.actor }}/devcontainers/ubuntu \
                 --cache-from ghcr.io/${{ github.actor }}/devcontainers/ubuntu \
                 --push true
-        - name: Build and push languages
+        - name: Build and push devcontainers/ubuntu
           run: |
             devcontainer build \
-                --workspace-folder src/${{ matrix.language}} \
-                --image-name ghcr.io/${{ github.actor }}/devcontainers/${{ matrix.language}} \
-                --cache-from ghcr.io/${{ github.actor }}/devcontainers/${{ matrix.language}} \
+                --workspace-folder src/ubuntu \
+                --image-name ghcr.io/${{ github.actor }}/devcontainers/ubuntu \
+                --cache-from ghcr.io/${{ github.actor }}/devcontainers/ubuntu \
+                --push true
+        - name: Build and push devcontainers/{{ matrix.language }}
+          run: |
+            devcontainer build \
+                --workspace-folder src/${{ matrix.language }} \
+                --image-name ghcr.io/${{ github.actor }}/devcontainers/${{ matrix.language }} \
+                --cache-from ghcr.io/${{ github.actor }}/devcontainers/${{ matrix.language }} \
                 --push true
