@@ -9,12 +9,5 @@
             "userGid": 1000
         }
     },
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "christian-kohler.path-intellisense"
-            ]
-        }
-    },
     "remoteUser": "vscode"
 }
