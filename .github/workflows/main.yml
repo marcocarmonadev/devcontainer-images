@@ -17,8 +17,9 @@ jobs:
         - name: Generate .devcontainer.json files
           run: |
             jq \
-              -s '.[1].customizations.vscode.extensions += .[0].customizations.vscode.extensions | .[0] * .[1]' \
-              -S \
+              --slurp \
+              --sort-keys \
+              '.[0] * .[1]' \
               source/devcontainer.json source/${{ matrix.language }}/devcontainer.json > source/${{ matrix.language }}/.devcontainer.json
         - name: Set up Docker Buildx
           uses: docker/setup-buildx-action@v3
