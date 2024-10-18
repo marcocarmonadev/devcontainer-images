@@ -1,7 +1,0 @@
-{
-    "name": "Go",
-    "build": {
-        "dockerfile": "Dockerfile"
-    },
-    "customizations": {}
-}

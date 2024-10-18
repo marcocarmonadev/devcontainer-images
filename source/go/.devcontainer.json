@@ -1,0 +1,21 @@
+{
+    "image": "golang",
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils": {
+            "installZsh": false,
+            "installOhMyZsh": false,
+            "installOhMyZshConfig": false,
+            "username": "vscode",
+            "userUid": 1000,
+            "userGid": 1000
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "golang.Go"
+            ]
+        }
+    },
+    "remoteUser": "vscode"
+}

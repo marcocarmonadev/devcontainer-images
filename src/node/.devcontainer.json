@@ -1,7 +1,0 @@
-{
-    "name": "Node",
-    "build": {
-        "dockerfile": "Dockerfile"
-    },
-    "customizations": {}
-}
