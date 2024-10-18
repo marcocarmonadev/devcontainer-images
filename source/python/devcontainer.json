@@ -6,8 +6,17 @@
         "vscode": {
             "extensions": [
                 "ms-python.python",
-                "VisualStudioExptTeam.vscodeintellicode"
-            ]
+                "VisualStudioExptTeam.vscodeintellicode",
+                "tamasfe.even-better-toml"
+            ],
+            "settings": {
+                "python.terminal.activateEnvironment": false,
+                "python.analysis.typeCheckingMode": "standard",
+                "python.analysis.autoImportCompletions": true,
+                "[toml]": {
+                    "editor.defaultFormatter": "tamasfe.even-better-toml"
+                }
+            }
         }
     }
 }
