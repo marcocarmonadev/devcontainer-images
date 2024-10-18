@@ -1,7 +1,8 @@
 {
     "name": "Python",
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-    "features": {},
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
     "customizations": {
         "vscode": {
             "extensions": [
