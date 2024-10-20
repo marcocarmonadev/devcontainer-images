@@ -1,9 +1,6 @@
 {
     "build": {
-        "dockerfile": "Dockerfile",
-        "args": {
-            "VARIANT": "3.12"
-        }
+        "dockerfile": "Dockerfile"
     },
     "customizations": {
         "vscode": {

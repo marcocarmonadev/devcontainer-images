@@ -1,0 +1,2 @@
+ARG VARIANT
+FROM golang:${VARIANT}
