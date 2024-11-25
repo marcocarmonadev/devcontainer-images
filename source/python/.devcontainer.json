@@ -7,14 +7,19 @@
             "extensions": [
                 "ms-python.python",
                 "VisualStudioExptTeam.vscodeintellicode",
-                "tamasfe.even-better-toml"
+                "tamasfe.even-better-toml",
+                "charliermarsh.ruff"
             ],
             "settings": {
                 "python.terminal.activateEnvironment": false,
-                "python.analysis.typeCheckingMode": "standard",
+                "python.analysis.typeCheckingMode": "strict",
                 "python.analysis.autoImportCompletions": true,
                 "[toml]": {
                     "editor.defaultFormatter": "tamasfe.even-better-toml"
+                },
+                "ruff.organizeImports": true,
+                "[python]": {
+                    "editor.defaultFormatter": "charliermarsh.ruff"
                 }
             }
         }
