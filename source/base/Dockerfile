@@ -1,0 +1,2 @@
+ARG VARIANT
+FROM ubuntu:${VARIANT}
