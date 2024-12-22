@@ -1,2 +1,2 @@
 ARG VARIANT
-FROM ubuntu:${VARIANT}
+FROM debian:${VARIANT}
