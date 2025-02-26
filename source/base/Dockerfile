@@ -5,7 +5,9 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
     apt update \
     && apt upgrade -y \
     && apt install -y sudo
-RUN adduser --system --group --no-create-home --shell /bin/bash --uid 1000 vscode \
-    && usermod -aG sudo vscode
-USER vscode
+RUN addgroup --gid 1000 devcontainer \
+    && adduser --uid 1000 --gid 1000 devcontainer \
+    && adduser devcontainer sudo \
+    && echo "devcontainer ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/devcontainer
+USER devcontainer
 CMD ["sleep infinity"]
