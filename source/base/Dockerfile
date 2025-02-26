@@ -9,5 +9,3 @@ RUN addgroup --gid 1000 devcontainer \
     && adduser --uid 1000 --gid 1000 devcontainer \
     && adduser devcontainer sudo \
     && echo "devcontainer ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/devcontainer
-USER devcontainer
-CMD ["sleep infinity"]

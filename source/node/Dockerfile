@@ -12,5 +12,3 @@ RUN deluser --remove-home --remove-all-files node \
     && echo "devcontainer ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/devcontainer \
     && npm completion >> /etc/bash.bashrc \
     && node --completion-bash >> /etc/bash.bashrc
-USER devcontainer
-CMD ["sleep infinity"]

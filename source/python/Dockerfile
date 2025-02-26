@@ -13,5 +13,3 @@ RUN addgroup --gid 1000 devcontainer \
     && echo "devcontainer ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/devcontainer \
     && echo 'eval "$(uv generate-shell-completion bash)"' >> /etc/bash.bashrc \
     && echo 'eval "$(uvx --generate-shell-completion bash)"' >> /etc/bash.bashrc
-USER devcontainer
-CMD ["sleep infinity"]
