@@ -1,0 +1,7 @@
+{
+    "name": "${localWorkspaceFolderBasename}",
+    "image": "ghcr.io/marcocarmonadev/devcontainers/base:bookworm",
+    "runArgs": [
+        "--name=${localWorkspaceFolderBasename}-devcontainer"
+    ]
+}
