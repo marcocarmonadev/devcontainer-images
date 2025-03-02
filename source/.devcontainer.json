@@ -5,7 +5,8 @@
                 "VisualStudioExptTeam.vscodeintellicode",
                 "ms-vscode.vscode-typescript-next",
                 "esbenp.prettier-vscode",
-                "dbaeumer.vscode-eslint"
+                "dbaeumer.vscode-eslint",
+                "AmazonWebServices.aws-toolkit-vscode"
             ],
             "settings": {
                 "[typescript]": {
